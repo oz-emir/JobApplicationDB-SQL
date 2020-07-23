@@ -1,0 +1,50 @@
+Employment Agency System Project
+
+The FindAJobMadeEasy Agency has hired you to help design and implement a database so that they can streamline the process of matching job applicants to job postings.
+Study the forms provided to identify the data that the agency deals with.
+Part A
+Apply the process of Entity Relationship Modeling and the rules of normalization to design a relational database that will effectively store the data, ensuring ease of retrieval and data integrity.
+
+Business Rules
+	An applicant may apply for more than one type of job on one application. 
+	An applicant may complete more than one application.
+	A company may register more than one job posting with the agency
+	The agency stores information about each company it deals with: CompanyID, Company Name, contact person information, address 
+	The agency hires agents to help process applicant applications and job postings.
+	The agency stores information about each agent: ID, name, address, cell phone number, email address, login , password, salary, birthdate, hiredate
+	The agency tracks which applicants it recommended for a specific job and if the applicant was interviewed and whether the applicant was hired and for what salary.  
+	The agency tracks which agent was instrumental in recommending a job application for a specific job posting.  Agents that succeed in getting an applicant hired receive 10% of the weekly salary that the applicant will earn on that job. 
+	If an applicant remains on the job for 6 months after he is hired, the agency receives a finder’s fee of one month salary.  The agency can bill for this amount if the money hasn’t been received.
+	The agency can recommend more than one applicant for a specific job 
+	The agency can recommend an applicant for several job postings.
+	The agency allows job applicants to access its job postings but doesn’t allow them to see the name of the company or contact information. 
+	The agency doesn’t place applicants who don’t have at least one year experience in one skill, namely, the agency doesn’t place interns or inexperienced applicants.
+
+Part B
+Using SQL Server implement the database you designed above
+Include the following constraints
+	Agent:   must be at least 18 years old when hired
+	Job Applicant:  weekly salary preference must be 700 – 9000
+	Job:  weekly salary preference must be 700- 9000
+
+
+Part C:  Write a query that will address each of these requests
+1.	For each company, how many job applicants have been placed by the agency at that company
+2.	For each applicant, list the name of the applicant and the jobs he has applied for and the date of the application related to that job application.
+3.	For each skill, list the name of the skills and number of years required, the applicant id and name and cell phone number of the applicant that has that many years of that skill
+4.	For each company, list how many job postings have been received.
+5.	List the name of the company from which the most job postings have been received.
+6.	List the name of the applicant who currently has the most skills
+7.	For each job posting, list the names of the applicants that have some of the skills required by the job
+8.	For each job posting, list the names of the applicants that have all the skills required by the job 
+9.	For each applicant, list the job posting ID of each job for which he has some of the skills.
+10.	List the name of each applicant that has been hired 
+11.	Which applicant has indicated the highest salary requirement
+12.	List the names of each full-time job that has been posted and not yet filled
+13.	For each job posting, list the number of skills that are required for the job posting
+14.	List each job posted and the date it was posted of all jobs posted during the year 2018.
+15.	For each job posted in year 2018, list the name of each applicant that has been recommended for the job.
+16.	List each job posting whose annual salary is between 30000 – 70000
+17.	For a specific applicants, list each job posting whose salary meets the applicant’s salary requirement
+18.	List the name of each company that currently has a job posted for a programmer that hasn’t been filled
+
